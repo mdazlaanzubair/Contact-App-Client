@@ -1,7 +1,13 @@
 const Profile = () => {
   return (
     <>
-      <h1>Profile</h1>
+      <section className="my-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            
+          </div>
+        </div>
+      </section>
     </>
   );
 };

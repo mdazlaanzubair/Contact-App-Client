@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import Main from "./pages/main/Main";
 
 function App() {
-
   return (
     <div className="App">
-      <h1>Vite + React</h1>
+      <Main />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
