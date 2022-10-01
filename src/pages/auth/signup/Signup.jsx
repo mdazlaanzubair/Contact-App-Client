@@ -6,13 +6,13 @@ const Signup = () => {
       <section className="my-5">
         <div className="container p-4">
           <div className="row justify-content-center">
-            <div className="col-4 d-flex align-items-center">
+            <div className="col-md-4 d-flex align-items-center">
               <form>
                 <h1 className="display-4 fw-bolder">Signup</h1>
                 <hr className="hr" />
                 <div className="form-group row">
                   {/* <!-- fname input --> */}
-                  <div class="col-6 mb-4">
+                  <div class="col-md-6 mb-4">
                     <label class="form-label" for="fname">
                       First Name
                     </label>
@@ -24,7 +24,7 @@ const Signup = () => {
                     />
                   </div>
                   {/* <!-- lname input --> */}
-                  <div class="col-6 mb-4">
+                  <div class="col-md-6 mb-4">
                     <label class="form-label" for="lname">
                       Last Name
                     </label>
@@ -71,7 +71,7 @@ const Signup = () => {
                 </p>
               </form>
             </div>
-            <div className="col-8 d-flex align-items-center justify-content-center">
+            <div className="col-md-8 d-flex align-items-center justify-content-center">
               <img
                 src={SignupImg}
                 class="img-fluid rounded shadow-lg"

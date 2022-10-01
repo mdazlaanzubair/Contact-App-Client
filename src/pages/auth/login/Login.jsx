@@ -7,7 +7,7 @@ const Login = () => {
       <section className="my-5">
         <div className="container p-4">
           <div className="row justify-content-center">
-            <div className="col-8 d-flex align-items-center justify-content-center">
+            <div className="col-md-8 d-flex align-items-center justify-content-center">
               <img
                 src={LoginImg}
                 class="img-fluid rounded shadow-lg"
@@ -15,7 +15,7 @@ const Login = () => {
                 width="500"
               />
             </div>
-            <div className="col-4 d-flex align-items-center">
+            <div className="col-md-4 d-flex align-items-center">
               <form>
                 <h1 className="display-4 fw-bolder">Login</h1>
                 <hr className="hr" />

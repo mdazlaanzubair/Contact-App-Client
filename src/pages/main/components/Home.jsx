@@ -11,7 +11,7 @@ const Home = () => {
             Access and manage your contacts with new Contapp
           </h4>
           <hr className="hr" />
-          <Link className="btn btn-primary mt-3 col-2" to="/about">
+          <Link className="btn btn-primary mt-3 col-md-2" to="/about">
             Explore
           </Link>
         </div>

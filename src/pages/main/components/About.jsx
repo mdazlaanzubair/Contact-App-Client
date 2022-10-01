@@ -20,7 +20,7 @@ const About = () => {
             professionals, teams, and small businesses. Easily manage your
             relationships with CONTAPP.
           </p>
-          <Link className="btn btn-primary mt-3 col-3" to="/login">
+          <Link className="btn btn-primary mt-3 col-md-3" to="/login">
             Login
           </Link>
         </div>
