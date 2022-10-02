@@ -81,7 +81,7 @@ const Footer = () => {
             <i className="fab fa-react"></i>
           </a>{" "}
           by
-          <a className="text-secondary mx-2 " href="https://github.com/mdazlaanzubair">
+          <a className="text-link text-decoration-underline mx-2 " href="https://github.com/mdazlaanzubair">
             MD Azlaan Zubair
           </a>
         </div>

@@ -10,7 +10,7 @@ const Login = () => {
             <div className="col-md-8 d-flex align-items-center justify-content-center">
               <img
                 src={LoginImg}
-                class="img-fluid rounded shadow-lg"
+                className="img-fluid rounded shadow-lg"
                 alt="Login image"
                 width="500"
               />
@@ -20,33 +20,33 @@ const Login = () => {
                 <h1 className="display-4 fw-bolder">Login</h1>
                 <hr className="hr" />
                 {/* <!-- Email input --> */}
-                <div class=" mb-4">
-                  <label class="form-label" for="email">
+                <div className=" mb-4">
+                  <label className="form-label" for="email">
                     E-mail
                   </label>
                   <input
                     type="email"
                     id="email"
-                    class="form-control bg-light"
+                    className="form-control bg-light"
                     placeholder="e.g. abc@example.com"
                   />
                 </div>
 
                 {/* <!-- Password input --> */}
-                <div class="mb-4">
-                  <label class="form-label" for="password">
+                <div className="mb-4">
+                  <label className="form-label" for="password">
                     Password
                   </label>
                   <input
                     type="password"
                     id="password"
-                    class="form-control bg-light"
+                    className="form-control bg-light"
                     placeholder="e.g. Secret"
                   />
                 </div>
 
                 {/* <!-- Submit button --> */}
-                <button type="submit" class="btn btn-primary btn-block">
+                <button type="submit" className="btn btn-primary btn-block">
                   Lets get in!
                 </button>
                 <p className="mt-3">

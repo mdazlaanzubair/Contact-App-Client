@@ -12,58 +12,58 @@ const Signup = () => {
                 <hr className="hr" />
                 <div className="form-group row">
                   {/* <!-- fname input --> */}
-                  <div class="col-md-6 mb-4">
-                    <label class="form-label" for="fname">
+                  <div className="col-md-6 mb-4">
+                    <label className="form-label" for="fname">
                       First Name
                     </label>
                     <input
                       type="fname"
                       id="fname"
-                      class="form-control bg-light"
+                      className="form-control bg-light"
                       placeholder="e.g. John"
                     />
                   </div>
                   {/* <!-- lname input --> */}
-                  <div class="col-md-6 mb-4">
-                    <label class="form-label" for="lname">
+                  <div className="col-md-6 mb-4">
+                    <label className="form-label" for="lname">
                       Last Name
                     </label>
                     <input
                       type="lname"
                       id="lname"
-                      class="form-control bg-light"
+                      className="form-control bg-light"
                       placeholder="e.g. Doe"
                     />
                   </div>
                 </div>
                 {/* <!-- Email input --> */}
-                <div class="form-group mb-4">
-                  <label class="form-label" for="email">
+                <div className="form-group mb-4">
+                  <label className="form-label" for="email">
                     E-mail address
                   </label>
                   <input
                     type="email"
                     id="email"
-                    class="form-control bg-light"
+                    className="form-control bg-light"
                     placeholder="e.g. abc@example.com"
                   />
                 </div>
 
                 {/* <!-- Password input --> */}
-                <div class="form-group mb-4">
-                  <label class="form-label" for="password">
+                <div className="form-group mb-4">
+                  <label className="form-label" for="password">
                     Password
                   </label>
                   <input
                     type="password"
                     id="password"
-                    class="form-control bg-light"
+                    className="form-control bg-light"
                     placeholder="e.g. Secret"
                   />
                 </div>
 
                 {/* <!-- Submit button --> */}
-                <button type="submit" class="btn btn-primary btn-block">
+                <button type="submit" className="btn btn-primary btn-block">
                   Lets get in!
                 </button>
                 <p className="mt-3">
@@ -74,7 +74,7 @@ const Signup = () => {
             <div className="col-md-8 d-flex align-items-center justify-content-center">
               <img
                 src={SignupImg}
-                class="img-fluid rounded shadow-lg"
+                className="img-fluid rounded shadow-lg"
                 alt="Login image"
                 width="500"
               />
