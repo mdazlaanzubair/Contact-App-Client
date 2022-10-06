@@ -69,7 +69,7 @@ const Profile = () => {
                       id="male"
                       value="1"
                     />
-                    <label className="form-check-label" for="male">
+                    <label className="form-check-label" htmlFor="male">
                       Male
                     </label>
                   </div>
@@ -81,7 +81,7 @@ const Profile = () => {
                       id="female"
                       value="2"
                     />
-                    <label className="form-check-label" for="female">
+                    <label className="form-check-label" htmlFor="female">
                       Female
                     </label>
                   </div>
@@ -93,7 +93,7 @@ const Profile = () => {
                       id="private"
                       value="0"
                     />
-                    <label className="form-check-label" for="private">
+                    <label className="form-check-label" htmlFor="private">
                       Private
                     </label>
                   </div>

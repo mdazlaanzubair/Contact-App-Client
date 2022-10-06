@@ -35,17 +35,19 @@ const Contact = () => {
         <div className="container p-4">
           <div className="row justify-content-between">
             <div className="col-md-4 p-4">
-              <ContactForm alert={alert} />
+              <ContactForm errors="" />
             </div>
             <div className="col-md-8 p-4">
               {contactsList.length > 0 ? (
-                <ContactFilters contacts={contactsList} />
+                <ContactFilters contacts={contactsList} alert={alert} />
               ) : (
                 ""
               )}
-              <div className="row justify-content-center">
+              <div className="row justify-content-start">
                 {contactsList &&
-                  contactsList.map((contact) => <ContactCard contact={contact} />)}
+                  contactsList.map((contact, index) => (
+                    <ContactCard contact={contact} key={index} />
+                  ))}
               </div>
             </div>
           </div>

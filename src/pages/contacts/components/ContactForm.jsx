@@ -1,72 +1,124 @@
-const ContactForm = ({alert}) => {
+import { useState } from "react";
+import formValidator from "./form_functions/formValidator";
+
+const ContactForm = ({ errors }) => {
+  const genders = ["Private", "Male", "Female"];
+  const relations = ["Friend", "Family", "Neighbor", "Colleague", "Stranger"];
+  const [formData, setFormData] = useState({});
+
+  const formSubmitted = async (e) => {
+    e.preventDefault();
+
+    // creating object for the database
+    const new_contact = {
+      fname,
+      lname,
+      about,
+      contact,
+      email,
+      gender: "",
+      relation: "",
+    };
+
+    // sending object to the database
+    const res = await fetch(
+      "https://calm-jade-sheep.cyclic.app/api/contact/create",
+      {
+        method: "POST",
+        body: new_contact,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+
+    const result = await res.json();
+    console.log(result);
+  };
   return (
     <>
-      <form className="card p-3">
-        {alert != "" ? (
+      <form className="card p-3" onSubmit={formSubmitted}>
+        {errors != "" ? (
           <div className="alert-box px-3 py-1 bg-danger text-light mb-3 rounded-3">
-            <small>{alert.msg}</small>
+            <small>{errors.msg}</small>
           </div>
         ) : (
           ""
         )}
         <h4 className="text-center">New Contact</h4>
+        {/* First Name Field */}
         <div className="form-group m-3">
           <input
             type="text"
-            id="name"
+            id="fname"
             className="form-control"
-            placeholder="Full Name"
+            placeholder="First Name"
           />
         </div>
+        {/* Last Name Field */}
+        <div className="form-group m-3">
+          <input
+            type="text"
+            id="lname"
+            className="form-control"
+            placeholder="Last Name"
+          />
+        </div>
+        {/* Contact Field */}
         <div className="form-group m-3">
           <input
             type="text"
             id="contact"
             className="form-control"
-            placeholder="e.g. (+92)-XXX-XXXXXXXX"
+            placeholder="Contact"
           />
         </div>
+        {/* Email Field */}
         <div className="form-group m-3">
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input "
-              type="radio"
-              name="gender"
-              id="male"
-              value="1"
-            />
-            <label className="form-check-label small" htmlFor="male">
-              Male
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input "
-              type="radio"
-              name="gender"
-              id="female"
-              value="2"
-            />
-            <label className="form-check-label small" htmlFor="female">
-              Female
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input "
-              type="radio"
-              name="gender"
-              id="private"
-              value="0"
-            />
-            <label className="form-check-label small" htmlFor="private">
-              Private
-            </label>
-          </div>
+          <input
+            type="email"
+            id="email"
+            className="form-control"
+            placeholder="E-mail Address"
+          />
+        </div>
+        {/* Gender Field */}
+        <div className="form-group m-3">
+          <select className="form-select" id="gender" defaultValue={"Private"}>
+            {genders.map((gender, index) => (
+              <option key={"gender-" + index} value={gender}>
+                {gender}
+              </option>
+            ))}
+          </select>
+        </div>
+        {/* Relation Field */}
+        <div className="form-group m-3">
+          <select
+            className="form-select"
+            id="relation"
+            defaultValue={"Stranger"}
+          >
+            {relations.map((relation, index) => (
+              <option key={"relation-" + index} value={relation}>
+                {relation}
+              </option>
+            ))}
+          </select>
+        </div>
+        {/* Fist Name Field */}
+        <div className="form-group m-3">
+          <textarea
+            type="text"
+            id="about"
+            rows="3"
+            className="form-control"
+            placeholder="Something about your new contact..."
+          />
         </div>
 
         <div className="form-group m-3 text-center">
-          <button className="btn btn-primary btn-block">Save</button>
+          <button type="submit" className="btn btn-primary btn-block">
+            <i className="far fa-save me-2"></i>Save
+          </button>
         </div>
       </form>
     </>

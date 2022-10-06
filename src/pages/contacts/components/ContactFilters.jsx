@@ -1,4 +1,4 @@
-const ContactFilters = ({ contacts }) => {
+const ContactFilters = ({ alert, contacts }) => {
   // counting gender wise
   const female = contacts.filter((contact) =>
     contact.gender === "Female" ? true : false
@@ -13,6 +13,14 @@ const ContactFilters = ({ contacts }) => {
   return (
     <>
       <div className="row justify-content-center action-center">
+        {alert != "" ? (
+          <div className="alert-box px-3 py-1 bg-warning text-light mb-3 rounded-3">
+            <i className="fas fa-skull-crossbones me-2"></i>
+            <small>{alert.msg}</small>
+          </div>
+        ) : (
+          ""
+        )}
         <div className="col-md my-3">
           Contacts Count:{" "}
           <span className="mx-2 female text-danger" title="Females">
